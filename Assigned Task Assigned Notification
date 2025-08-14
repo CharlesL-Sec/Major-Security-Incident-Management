@@ -1,0 +1,166 @@
+# MSIM Task Assigned Notification
+
+
+```html
+
+
+<p>&nbsp;</p>
+<style type="text/css">
+  /* General Reset and Body Styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Lato, Arial, sans-serif;
+    -webkit-text-size-adjust: none;
+    /* Prevent font size adjustments on mobile */
+    background-color: #f4f4f4;
+    /* Optional: Light background for the entire email */
+  }
+
+  /* Responsive Container */
+  .email-container {
+    width: 100%;
+    max-width: 670px;
+    /* Original table width */
+    margin: 20px auto;
+    /* Center the container */
+    border-collapse: collapse;
+    overflow: hidden;
+    /* Ensures rounded corners work correctly */
+    border-radius: 10px;
+    /* Optional: Rounded corners for the whole email */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional: Subtle shadow for depth */
+  }
+
+  /* Header Section */
+  .header {
+    background-color: rgb(255, 102, 0);
+    /* Orange background */
+    color: rgb(236, 240, 241);
+    /* Light text color */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .header img {
+    max-width: 200px;
+    /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .header p {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
+  /* Content Section */
+  .content {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+  /* Example Flexbox Layout for Content */
+  .content-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap on smaller screens */
+    margin-bottom: 15px;
+    /* Spacing between rows */
+  }
+
+  .content-col {
+    flex: 1;
+    /* Each column takes up equal space */
+    padding: 10px;
+    min-width: 200px;
+    /* Minimum width for each column */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+  }
+
+  /* Footer Section */
+  .footer {
+    background-color: rgb(255, 102, 0);
+    /* Orange background */
+    color: rgb(236, 240, 241);
+    /* Light text color */
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+  }
+
+  .footer img {
+    max-width: 100px;
+    /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  /* Utility Classes (from your original CSS) */
+  .btn a {
+    text-decoration: none;
+  }
+
+  .btn.inverse a {
+    color: #fff;
+  }
+
+  #requestapprove a {
+    color: #fff !important;
+  }
+
+  /* Mobile Link Styling */
+  .mobile-link a,
+  .mobile-link span {
+    text-decoration: none !important;
+    color: inherit !important;
+    border: none !important;
+  }
+</style>
+<div class="email-container">
+<div class="header"><img src="logo_banner.pngx" alt="Company Logo">
+<p>Major Security Incident Management Notification</p>
+</div>
+<div class="content"><!-- Example Content Using Flexbox -->
+<div class="content-row">
+<div class="content-col">
+<h3><span style="font-size: 12pt;">Incident Details</span></h3>
+<p><span style="font-size: 12pt;">You have been assigned task MSI Number: Number: ${number}</span></p>
+</div>
+</div>
+<div class="content-row">
+<div class="content-col">
+<p><span style="font-size: 12pt;"><strong>MSI Task Number:</strong> &nbsp; ${number}</span></p>
+<p><span style="font-size: 12pt;"><strong>Assigned to:</strong> ${assigned_to}</span></p>
+<p><span style="font-size: 12pt;"><strong>Assignment Group:</strong> ${assignment_group.name}</span></p>
+<p>&nbsp;</p>
+</div>
+<div id="colunm two" class="content-col">
+<p><span style="font-size: 12pt;">Incident: ${parent}</span></p>
+<p><span style="font-size: 12pt;">Priority: ${priority}</span></p>
+</div>
+</div>
+<hr><!-- Add more content rows and columns as needed -->
+<div class="content-row">
+<div class="content-col">
+<p><span style="font-size: 12pt;"><strong>Description:</strong> ${assignment_group.parent.description}</span></p>
+<p><span style="font-size: 12pt;">A critical security incident has been reported affecting multiple systems. Immediate action is required.</span></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 12pt;">Task Details:</span></strong></p>
+<p><strong><span style="font-size: 12pt;">Description: </span></strong><span style="font-size: 12pt;">${description}</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</div>
+<hr></div>
+<div class="footer"><img src="logo_banner.pngx" alt="Company Logo">
+<p>Major Security Incident Management</p>
+</div>
+</div>
+
+```
