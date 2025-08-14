@@ -1,0 +1,156 @@
+
+<style type="text/css">
+        /* General Reset and Body Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Lato, Arial, sans-serif;
+            -webkit-text-size-adjust: none;
+            background-color: #f4f4f4;
+            color: #333; /* Darker default text colour */
+            line-height: 1.6; /* Improved readability */
+        }
+
+        /* Email Container */
+        .email-container {
+            width: 100%;
+            max-width: 800px; /* Maximum width */
+            margin: 20px auto;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff; /* White background for content */
+        }
+
+        /* Header Section */
+        .header {
+            background-color: rgb(255, 102, 0);
+            color: #ecf0f1;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Distribute space between logo and title */
+        }
+
+        .header img {
+            max-width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        .header-text {
+            flex: 1; /* Take remaining space */
+            padding-left: 20px;
+        }
+
+        .header-text h1 {
+            font-size: 1.5em;
+            margin: 0 0 5px;
+            color: #fff; /* White header text */
+        }
+
+        .header-text p {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        /* Main Content Section */
+        .content {
+            padding: 20px;
+        }
+
+        /* Content Blocks (using Flexbox for responsiveness) */
+        .content-block {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9; /* Light grey background */
+        }
+
+        .content-block h2 {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: rgb(255, 102, 0);
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
+        }
+
+        .footer img {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        /* Utility Classes (from your original CSS - adapted) */
+        .mobile-link a,
+        .mobile-link span {
+            text-decoration: none !important;
+            color: inherit !important;
+            border: none !important;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 600px) {
+            .header {
+                flex-direction: column; /* Stack logo and title on small screens */
+                align-items: center; /* Center items when stacked */
+                text-align: center; /* Center header text on small screens */
+            }
+
+            .header-text {
+                padding-left: 0; /* Remove left padding on small screens */
+                margin-top: 10px; /* Add some space between logo and text */
+            }
+
+            .header img {
+                max-width: 120px; /* Smaller logo on small screens */
+            }
+        }
+    </style>
+<div class="email-container">
+<div class="header"><img src="logo_banner.pngx" alt="Company Logo">
+<div class="header-text">
+<h1>Executive Summary</h1>
+<p>Major Security Incident Summary Report</p>
+</div>
+</div>
+<div class="content"><!-- Example Content Blocks -->
+<div class="content-block">
+<h2>Incident Overview</h2>
+<p>This report summarises the key findings and actions taken during the recent major security incident.</p>
+</div>
+<div class="content-block">
+<h2>Key Findings</h2>
+<ul>
+<li>Vulnerability identified in system X.</li>
+<li>Attack vector: Phishing email.</li>
+<li>Data breach affected X number of users.</li>
+</ul>
+</div>
+<div class="content-block">
+<h2>Actions Taken</h2>
+<ol>
+<li>Vulnerability patched.</li>
+<li>Affected systems isolated.</li>
+<li>Incident response team activated.</li>
+</ol>
+</div>
+<!-- Insert your ${notification:body} content here - ensure it's well-structured -->
+<div class="content-block">
+<h2>Additional Details</h2>
+${notification:body}</div>
+</div>
+<div class="footer"><img src="logo_banner.pngx" alt="Company Logo">
+<p>Technical Security Team</p>
+</div>
+</div>
