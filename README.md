@@ -3,7 +3,7 @@
 
 ```mermaid
 
-flowchart td
+flowchart TD 
 
 
 ```
