@@ -7,10 +7,12 @@
 ```mermaid
 
 flowchart TD
+
+subgraph notification
  notificationpromtedmsi[SI EJ Promoted as MSI]
  tablename[sn_msi_incident]
  mailscript[Mail Script]
-
+end
 
 
 
